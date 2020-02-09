@@ -26,11 +26,11 @@ int partition(int lef, int rig) {
 	return high;
 }
 
-void sort_quick(int lef, int rig) {
+void do_quick_sort(int lef, int rig) {
 	if (lef <= rig) {
 		int pivot = partition(lef, rig);
-		sort_quick(lef, pivot-1);
-		sort_quick(pivot+1, rig);
+		do_quick_sort(lef, pivot-1);
+		do_quick_sort(pivot+1, rig);
 	}
 }
 
@@ -49,7 +49,7 @@ void input(void) {
 }
 
 void process() {
-	sort_quick(0, n-1);
+	do_quick_sort(0, n-1);
 }
 
 void output(void) {

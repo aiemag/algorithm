@@ -5,7 +5,7 @@
 int n;
 int a[N];
 
-void sort_insertion() {
+void do_insertion_sort() {
 	int i, j, key;
 
 	for (i = 1; i<n ; i++) {
@@ -33,7 +33,7 @@ void input(void) {
 }
 
 void process() {
-	sort_insertion();
+	do_insertion_sort();
 }
 
 void output(void) {

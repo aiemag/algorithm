@@ -5,7 +5,7 @@
 int n;
 int a[N];
 
-void sort_selection() {
+void do_selection_sort() {
 	int i, j, min_idx, temp;
 
 	for (i = 0; i < n - 1; i++) {
@@ -38,7 +38,7 @@ void input(void) {
 }
 
 void process() {
-	sort_selection();
+	do_selection_sort();
 }
 
 void output(void) {
