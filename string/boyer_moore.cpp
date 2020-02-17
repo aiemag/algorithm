@@ -11,16 +11,15 @@ int mstrlen(char* s) {
 }
 
 void compute_skip(char pattern[], int skip[]){
-	int length = 0, i, j;
-	
-	length = mstrlen(pattern);
+	int i, j;	
+	int len = mstrlen(pattern);
 
 	for (i = 0; i < 500; i++){
-		skip[i] = length;
+		skip[i] = len;
 	}
 
-	for (j = 0; j < length - 1; j++){
-		skip[pattern[j]] = length - 1 - j;
+	for (j = 0; j < len - 1; j++){
+		skip[pattern[j]] = len - 1 - j;
 	}
 }
 
@@ -37,8 +36,7 @@ void do_boyer_moore_horspool(char text[], char pattern[]){
 		k = i + p_len - 1;
 		
 		while (j >= 0 && pattern[j] == text[k]){
-			j--;
-			k--;
+			j--; k--;
 		}
 
 		if (j == -1){
