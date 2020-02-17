@@ -11,6 +11,7 @@ int mstrlen(char* s) {
 }
 
 void compute_skip(char pattern[], int skip[]){
+
 	int i, j;	
 	int len = mstrlen(pattern);
 
