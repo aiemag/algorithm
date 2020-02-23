@@ -13,7 +13,7 @@ void push(int value) {
 	}
 
 	heap[heap_cnt] = value;
-	int cur = heap_cnt;
+	int cur = heap_cnt++;
 	int parent = (cur - 1) / 2;
 
 	while (cur > 0 && heap[cur] < heap[parent]) {
@@ -25,8 +25,6 @@ void push(int value) {
 		cur = parent;
 		parent = (cur - 1) / 2;
 	}
-
-	heap_cnt++;
 }
 
 int pop() {
